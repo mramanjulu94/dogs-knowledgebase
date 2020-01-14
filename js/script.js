@@ -5,7 +5,7 @@ const repository = [];
 // Creates variable for index 'ul' with pokemonList
 const $pokemonList = $("ul");
 const $modalContainer = $("#modal-container");
-const apiUrl = "https://dog.ceo/api/breeds/list/all";
+const apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150';";
 
 // Adds new Pokemon to var repository
 function add(pokemon) {
@@ -36,7 +36,7 @@ $pokemonList.append($listItem);
 
 const $button = $("<button>");
 
-$button.text = (pokemon.name);
+$button.text(pokemon.name);
 
 $button.addClass("pokemon-name");
 
