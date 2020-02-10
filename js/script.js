@@ -27,22 +27,25 @@ return pokemon;
 }
 
 // Create a function 'addListItem' for each Pokemon object
+
+
 function addListItem(pokemon) {
+const pokemonList = $('.list-group');
 
+const listItem = $('<li class="list-group-item"></li>');
 
-const $listItem = $("<li></li>");
+$(pokemonList).append(listItem);
 
-$pokemonList.append($listItem);
+const btn = $(
+'<button class="btn" data-toggle="modal" data-target="#PokeModal"></button>'
+);
 
-const $button = $("<button>");
+$(btn).text(pokemon.name);
 
-$button.text(pokemon.name);
+$(listItem).append(btn);
 
-$button.addClass("pokemon-name");
+btn.on('click', function() {
 
-$listItem.append($button);
-
-$button.on("click", function () {
 
 showDetails(pokemon);
 });
